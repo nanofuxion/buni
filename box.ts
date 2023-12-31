@@ -18,7 +18,7 @@ let messages: any = [{
 
 
 const ollama = new OllamaClient({
-    host: 'http://10.0.0.2',
+    host: 'http://localhost',
     port: 11434,
     model: "llama2",
     config: {

@@ -19,7 +19,7 @@ var messages = [{
         content: "tell me a unique joke",
     }];
 var ollama = new index_1.default({
-    host: 'http://10.0.0.2',
+    host: 'http://localhost',
     port: 11434,
     model: "llama2",
     config: {

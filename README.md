@@ -9,10 +9,8 @@ Why did I name it buni? idk just liked the name.
 
 ## Installation
 
-To integrate Buni into your project, import the `OllamaClient` class from the library file.
-
-```typescript
-import OllamaClient from 'path_to_buni_library';
+```bash
+bun add github:nanofuxion/buni
 ```
 
 ## Usage
@@ -23,8 +21,8 @@ Instantiate `OllamaClient` with an `Options` object to connect to the Ollama ser
 
 ```ts
 const client = new OllamaClient({
-    host: 'your_host',
-    port: your_port,
+    host: 'ollama_host',
+    port: ollama_port,
     model: 'model_name', // Ollama model name
     // Optional parameters
     template: 'template_name', // Template for Ollama responses
@@ -121,8 +119,8 @@ const streamedChatResponse = await client.stream_chat({
 
 ## Contribution
 
-Contributions to the Ollama Client Library are welcome. Please ensure that your code aligns with the existing style and includes proper tests and documentation.
+Contributions to the Buni Ollama Client Library are welcome. Please ensure that your code aligns with the existing style and includes proper tests and documentation then submit a pull request.
 
 ---
 
-Note: This README is based on the `index.ts` file of the Ollama Client Library and may need adjustments to match the actual implementation and use cases of your project.
+Note: This README is based on the `index.ts` file of the Ollama Client Library and may need adjustments to match the actual implementation and use cases of your project. (Readme Partially generated using ChatGPT).

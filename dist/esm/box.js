@@ -1,22 +1,18 @@
 import OllamaClient from "buni/index";
 import readline from 'readline';
-
 // Set up readline interface for command line input
 const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
+    input: process.stdin,
+    output: process.stdout
 });
-
-let messages: any = [{
-    role: "system",
-    content: `you are a funny bot named Buni that likes to tell never before heard jokes`,
-},
-{
-    role: "user",
-    content: "tell me a unique joke",
-}]
-
-
+let messages = [{
+        role: "system",
+        content: `you are a funny bot named Buni that likes to tell never before heard jokes`,
+    },
+    {
+        role: "user",
+        content: "tell me a unique joke",
+    }];
 const ollama = new OllamaClient({
     host: 'http://10.0.0.2',
     port: 11434,
@@ -24,16 +20,13 @@ const ollama = new OllamaClient({
     config: {
         temperature: 1,
     }
-})
-
+});
 ollama.connect().then(res => {
-    console.log((res as any));
+    console.log(res);
     // Start the chat stream after connection is established
-
-    console.log(`\n\n${messages[1].content}`)
+    console.log(`\n\n${messages[1].content}`);
     startStreamChat();
 });
-
 function startStreamChat() {
     let isTyping = false;
     ollama.stream_chat({
@@ -48,7 +41,7 @@ function startStreamChat() {
             process.stdout.write(`${tokens}`);
         },
     }).then(res => {
-        console.log("")
+        console.log("");
         // After printing out the tokens, ask for the next input
         rl.question('\x1b[30m\x1b[36m\x1b[5mYour response:\x1b[0m ', (input) => {
             messages.push({

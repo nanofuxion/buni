@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "outDir": "./dist/cjs",
+    "esModuleInterop": true,
+    "paths": {
+      "buni/*": [
+        "./*"
+      ]
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist/types",
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "paths": {
+      "buni/*": [
+        "./*"
+      ]
+    },
+    "noEmit": false
+  }
+}

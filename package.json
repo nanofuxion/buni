@@ -1,0 +1,13 @@
+{
+  "name": "buni",
+  "main": "./.dist/cjs/index.js",
+  "module": "./.dist/esm/index.js",
+  "types": "./.dist/types/index.d.ts",
+  "devDependencies": {
+    "bun-types": "latest",
+    "buni": "./"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

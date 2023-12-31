@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "esnext",
+    "outDir": "./dist/esm",
+    "esModuleInterop": true,
+    "paths": {
+      "buni/*": [
+        "./*"
+      ]
+    },
+    "moduleResolution": "bundler"
+  }
+}
